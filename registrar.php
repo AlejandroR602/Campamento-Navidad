@@ -12,7 +12,9 @@
     // Crear carpetas si no existen
     $carpeta = "data";
     $subcarpeta = "./data/logs";
-    // TODO
+    $archivo = 'data/elfos.json';
+    $log = 'data/logs/registro.log';
+    
     if(!is_dir($carpeta) && !is_dir($subcarpeta)){
         mkdir($carpeta, 0755);
         mkdir($subcarpeta, 0755);
@@ -20,11 +22,11 @@
     } 
 
     if (isset($_POST['accion']) && $_POST['accion'] == 'registrar') {
-        // TODO
         $nombre = trim($_POST['nombre']);
         $curso = trim($_POST['curso']);
         $edad = intval(trim($_POST['edad']));
         $menu = trim($_POST['menu'] ?? '');
+
 
         if($nombre == "" || $curso == "" || $edad == "" || $menu == ""){
             echo "Por favor, completa todos los campos.<br>";
@@ -35,14 +37,18 @@
                 "curso" => $curso,
                 "menu" => $menu
             ];
-            chdir($carpeta);
+
+            $array_elfos = [];
+            if(is_dir){
+                $lista = json_decode
+                array_push($array_elfos, $lista);
+            }
+            array_push($array_elfos, $elfo);
+
             $json_string = json_encode($elfo,JSON_PRETTY_PRINT);
-            $archivo = 'elfos.json';
             file_put_contents($archivo, $json_string);
             echo "Datos guardados correctamentes en $archivo";
 
-            $subcarpeta = "logs";
-            chdir($subcarpeta);
             $datos = date("Y-m-d H:i:s") . "- Registrado: " . $nombre . "\n";
             $texto = "registro.log";
             file_put_contents($texto,$datos);
