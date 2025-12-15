@@ -1,6 +1,14 @@
-{
-    "nombre": "Irene",
-    "edad": 21,
-    "curso": "1 primaria",
-    "menu": "Gluten"
-}
+[
+    {
+        "nombre": "Magneto",
+        "edad": 21,
+        "curso": "2 ESO",
+        "menu": "Lactosa"
+    },
+    {
+        "nombre": "Alejandro Raboso Martos",
+        "edad": 6,
+        "curso": "1 primaria",
+        "menu": "Lactosa"
+    }
+]
