@@ -10,5 +10,23 @@
         "edad": 6,
         "curso": "1 primaria",
         "menu": "Lactosa"
+    },
+    {
+        "nombre": "A A A",
+        "edad": 6,
+        "curso": "1\u00ba primaria",
+        "menu": "Gluten"
+    },
+    {
+        "nombre": "Julian Cruz Alonso",
+        "edad": 6,
+        "curso": "1\u00ba primaria",
+        "menu": "Lactosa"
+    },
+    {
+        "nombre": "Alejandro Dreamwalker",
+        "edad": 13,
+        "curso": "2\u00baESO",
+        "menu": "Estandar"
     }
 ]
