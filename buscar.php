@@ -30,7 +30,7 @@
                 $json_existing = file_get_contents($archivo);
                 $array_elfos = json_decode($json_existing, true);
             }
-
+ 
             $infoElfo;
             $condicion = false;
             foreach ($array_elfos as $elfo) {
